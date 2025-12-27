@@ -1329,7 +1329,11 @@ window.confirmExitStory = function () {
    [[Sopiiko tämä ala sinulle - Testaa!-&gt;Ammattitesti: alku]]
   
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="750,100" size="100,100">:: StoryInit
+</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="750,100" size="100,100">&lt;&lt;script&gt;&gt;
+State.reset();
+Engine.play(&quot;Cover&quot;);
+&lt;&lt;/script&gt;&gt;
+
 &lt;&lt;set $pisteet = 0&gt;&gt;
 &lt;&lt;set $maxKysymykset = 7&gt;&gt;  /* muuta, jos kysymysten määrä muuttuu */
 
@@ -2282,7 +2286,10 @@ Alla on yhteenveto vastauksistasi. Voit kopioida tekstin omaan  Google Docs -dok
     Sulje välilehti
   &lt;/button&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="36" name="Cover" tags="" position="525,25" size="100,100">
+</tw-passagedata><tw-passagedata pid="36" name="Cover" tags="" position="525,25" size="100,100">&lt;&lt;script&gt;&gt;
+State.reset();
+&lt;&lt;/script&gt;&gt;
+
 &lt;&lt;run document.body.classList.add(&#39;hide-navbar-art&#39;)&gt;&gt;
 
 &lt;div class=&quot;cover-link-art&quot;&gt;
