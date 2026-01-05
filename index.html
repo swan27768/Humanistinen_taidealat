@@ -746,6 +746,58 @@ a.macro-link.btn--danger {
 #passages .passage [style*="#4F8A62"] {
   color: var(--text-main) !important;
 }
+/* ==========================================================
+   SAAVUTETTAVUUS – SUUREMPI, SELKEÄMPI TYPOGRAFIA
+   ========================================================== */
+
+/* Peruskirjasinkoko */
+html {
+  font-size: 18px; /* aiempi ~16px */
+}
+
+/* Kaikki perusleipätekstit */
+#passages .passage p,
+#passages .passage li,
+#passages .passage div,
+#passages .passage span,
+#passages .passage section {
+  font-size: 1rem;        /* = 18px */
+  line-height: 1.85;     /* enemmän ilmaa riveille */
+}
+
+/* Otsikot */
+#passages .passage h1 {
+  font-size: 2.4rem;
+}
+#passages .passage h2 {
+  font-size: 1.9rem;
+}
+#passages .passage h3 {
+  font-size: 1.4rem;
+}
+
+/* Napit – isompi teksti ja parempi kosketettavuus */
+.intro-nappi a,
+.answer-group a,
+.navbar-fixed button,
+.navbar-fixed a {
+  font-size: 1rem;      /* 18px */
+  min-height: 52px;    /* WCAG kosketuskorkeus */
+}
+
+/* Tekstikentät */
+#passages .lomake-ryhma textarea,
+#passages .lomake-ryhma input,
+#passages .lomake-ryhma select {
+  font-size: 1rem;     /* 18px */
+  line-height: 1.7;
+}
+
+/* Linkit */
+#passages .passage a:not(.btn):not(.macro-link) {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* ========= NAVBAR ========= */
 $(document).on(":passagestart", function (event) {
   if (!event || !event.passage) return;
